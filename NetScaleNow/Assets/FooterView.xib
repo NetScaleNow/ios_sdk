@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterView" customModule="cmc_mobile_network" customModuleProvider="target">
+            <connections>
+                <outlet property="agbLink" destination="i97-CK-idj" id="WCL-Q9-I6r"/>
+                <outlet property="copyrightLink" destination="ZjQ-5d-ERh" id="0I3-w4-Py3"/>
+                <outlet property="dataProtectionLink" destination="IoH-T3-umN" id="MuR-qa-9iQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZZ4-2l-EkU">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="31"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7W0-2Y-mcV">
+                    <rect key="frame" x="0.0" y="0.0" width="383" height="31"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LlV-gB-IS2">
+                            <rect key="frame" x="0.0" y="0.0" width="383" height="1"/>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="wdG-tK-r2d"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCC-We-78C">
+                            <rect key="frame" x="0.0" y="1" width="383" height="30"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-sz-TQG">
+                                    <rect key="frame" x="8" y="4" width="367" height="22"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i97-CK-idj">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                            <state key="normal" title="AGB">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="openAGB" destination="-1" eventType="touchUpInside" id="i2L-og-lfA"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoH-T3-umN">
+                                            <rect key="frame" x="30" y="0.0" width="51" height="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                            <state key="normal" title="Datenschutz">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="openDataProtection" destination="-1" eventType="touchUpInside" id="vAF-Kn-hMj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjQ-5d-ERh">
+                                            <rect key="frame" x="81" y="0.0" width="286" height="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                            <state key="normal" title="© by cmc">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="openCMC" destination="-1" eventType="touchUpInside" id="vLE-qW-Gmz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="OEc-sz-TQG" secondAttribute="trailing" constant="8" id="0Lu-Nh-Aqr"/>
+                                <constraint firstItem="OEc-sz-TQG" firstAttribute="leading" secondItem="dCC-We-78C" secondAttribute="leading" constant="8" id="O33-5z-I9G"/>
+                                <constraint firstAttribute="height" constant="30" id="kk3-DP-vl6"/>
+                                <constraint firstItem="OEc-sz-TQG" firstAttribute="top" secondItem="dCC-We-78C" secondAttribute="top" constant="4" id="uHR-36-Az7"/>
+                                <constraint firstAttribute="bottom" secondItem="OEc-sz-TQG" secondAttribute="bottom" constant="4" id="vcA-rl-f6X"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7W0-2Y-mcV" firstAttribute="leading" secondItem="ZZ4-2l-EkU" secondAttribute="leading" id="610-al-LYP"/>
+                <constraint firstAttribute="bottom" secondItem="7W0-2Y-mcV" secondAttribute="bottom" id="Tf5-bF-7Ww"/>
+                <constraint firstItem="7W0-2Y-mcV" firstAttribute="top" secondItem="ZZ4-2l-EkU" secondAttribute="top" id="Xqg-Ca-XuY"/>
+                <constraint firstAttribute="trailing" secondItem="7W0-2Y-mcV" secondAttribute="trailing" id="udU-gF-tYd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-23" y="-926"/>
+        </view>
+    </objects>
+</document>

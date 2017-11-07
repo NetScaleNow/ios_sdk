@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NetScaleNow_Example' do
+  pod 'NetScaleNow', :path => '../'
+
+  target 'NetScaleNow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

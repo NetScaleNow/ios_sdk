@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckboxView" customModule="NetScaleNow" customModuleProvider="target">
+            <connections>
+                <outlet property="checkbox" destination="hXe-nb-TtF" id="DjA-Kq-xTa"/>
+                <outlet property="checkboxLabel" destination="cZs-hg-1iC" id="zAz-hD-gde"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sA1-hE-X48">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mnr-CD-JZE">
+                    <rect key="frame" x="0.0" y="0.0" width="368" height="47"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-nb-TtF">
+                            <rect key="frame" x="0.0" y="0.0" width="32.5" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="XMT-Cf-zDT"/>
+                                <constraint firstAttribute="width" secondItem="hXe-nb-TtF" secondAttribute="height" multiplier="1:1" id="egY-A9-Kqs"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="8"/>
+                            <state key="normal" title="Button" image="icon_checkbox_outline"/>
+                            <state key="selected" image="icon_checkbox"/>
+                            <connections>
+                                <action selector="checkboxChange:" destination="-1" eventType="touchUpInside" id="cBi-qr-xva"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cZs-hg-1iC">
+                            <rect key="frame" x="32.5" y="0.0" width="335.5" height="23.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <string key="text">Ja, ich möchte künftig den kostenlosen Premium Shopping Newsletter per E-Mail erhalten.
+Das Einverständiss kann ich jederzeit widerrufen.</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="O46-bY-2Kp" appends="YES" id="GZS-xH-XMs"/>
+                            </connections>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Mnr-CD-JZE" firstAttribute="top" secondItem="sA1-hE-X48" secondAttribute="top" id="C1q-eD-sVW"/>
+                <constraint firstItem="Mnr-CD-JZE" firstAttribute="leading" secondItem="sA1-hE-X48" secondAttribute="leading" id="Zrf-Ct-ed4"/>
+                <constraint firstAttribute="bottom" secondItem="Mnr-CD-JZE" secondAttribute="bottom" priority="999" id="bC1-5d-dcN"/>
+                <constraint firstAttribute="trailing" secondItem="Mnr-CD-JZE" secondAttribute="trailing" id="vb5-JF-8vM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="455" y="-258.5"/>
+        </view>
+        <tapGestureRecognizer id="O46-bY-2Kp">
+            <connections>
+                <action selector="labelTapped:" destination="-1" id="rMI-uu-k4u"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="icon_checkbox" width="256" height="256"/>
+        <image name="icon_checkbox_outline" width="256" height="256"/>
+    </resources>
+</document>
