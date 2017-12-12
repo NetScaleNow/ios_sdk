@@ -1,5 +1,5 @@
 PODS:
-  - NetScaleNow (0.1.5)
+  - NetScaleNow (0.1.8)
 
 DEPENDENCIES:
   - NetScaleNow (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  NetScaleNow: 605e04f8c9057ccf269f9795621a84128d204ebe
+  NetScaleNow: 9d0aa99cf340a4be25e4a856efc960c5ad75b827
 
 PODFILE CHECKSUM: f17126e10acf777d4146b4ebb126e7f017c3316e
 

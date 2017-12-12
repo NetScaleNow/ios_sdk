@@ -23,7 +23,7 @@ struct Campaign :Codable {
         guard let logoUrl = logoUrl else {
             return nil
         }
-        return "http://my.netscalenow.de/r/thumbnail?url=\(logoUrl)&height=\((60 * UIScreen.main.scale))"
+        return "https://my.netscalenow.de/r/thumbnail?url=\(logoUrl)&height=\((60 * UIScreen.main.scale))"
     }
     var resizedHeaderUrl: String? {
         guard let headerUrl = headerUrl else {
@@ -31,7 +31,7 @@ struct Campaign :Codable {
         }
         
         let size = 304 * UIScreen.main.scale
-        return "http://my.netscalenow.de/r/resize?url=\(headerUrl)&width=\(size)&height=\(size)"
+        return "https://my.netscalenow.de/r/resize?url=\(headerUrl)&width=\(size)&height=\(size)"
     }
   
   private enum CodingKeys: String, CodingKey {
